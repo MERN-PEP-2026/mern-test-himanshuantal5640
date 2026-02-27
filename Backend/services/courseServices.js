@@ -1,17 +1,17 @@
 const Course = require("../models/Course");
 
-exports.create = async (data) => {
+exports.createCourse = async (data) => {
   return await Course.create(data);
 };
 
-exports.getAll = async () => {
+exports.getCourses = async () => {
   return await Course.find().sort({ createdAt: -1 });
 };
 
-exports.update = async (id, data) => {
+exports.updateCourse = async (id, data) => {
   return await Course.findByIdAndUpdate(id, data, { new: true });
 };
 
-exports.delete = async (id) => {
+exports.deleteCourse = async (id) => {
   return await Course.findByIdAndDelete(id);
 };

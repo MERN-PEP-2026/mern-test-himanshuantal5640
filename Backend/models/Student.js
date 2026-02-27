@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema({
-  name: String,
+  name: { type: String },
   email: { type: String, unique: true },
-  password: String,
+  password: { type: String },
   isVerified: { type: Boolean, default: false },
   provider: {
     type: String,
