@@ -13,14 +13,8 @@ function App() {
       <ToastProvider>
       <BrowserRouter>
         <Routes>
-
-          {/* Landing */}
           <Route path="/" element={<LandingPage />} />
-
-          {/* Auth */}
           <Route path="/auth" element={<AuthPage />} />
-
-          {/* Protected Dashboard */}
           <Route
             path="/dashboard"
             element={
@@ -29,7 +23,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-
         </Routes>
       </BrowserRouter>
       </ToastProvider>
